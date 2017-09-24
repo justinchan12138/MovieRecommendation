@@ -6,3 +6,8 @@ This is a fully functional app that recommends the 20 most popular and highly-ra
             "https://api.themoviedb.org/3/discover/movie?api_key=<<Insert your API Key Here>>";
 
 Then run the project in android studio and it should be working. Your phone needs to be connected to the internet to get the data from the API, but the app won't crush even if your phone is on airplane mode.  
+
+
+![temp1](https://user-images.githubusercontent.com/25237239/30786018-4641e5be-a167-11e7-948d-d91bf9e15980.PNG)
+
+![temp2](https://user-images.githubusercontent.com/25237239/30786019-4a0e34fe-a167-11e7-90fc-e663d7458bfc.PNG)
