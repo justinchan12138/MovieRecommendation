@@ -2,11 +2,11 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Sort Popularity"
+    <item android:title="@string/sort_ratings"
         android:id="@+id/popularity"
         android:orderInCategory="1"
         app:showAsAction="always" />
-    <item android:title="Sort Ratings"
+    <item android:title="@string/sort_ratings"
         android:id="@+id/rating"
         android:orderInCategory="2"
         app:showAsAction="always" />

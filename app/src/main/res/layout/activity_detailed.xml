@@ -9,16 +9,17 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="350dp"
+        android:contentDescription="image"
         android:layout_weight="0.63"
         android:padding="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
        />
 
     <TextView
+        android:padding="16dp"
         android:id="@+id/textView"
         android:layout_width="349dp"
         android:layout_height="165dp"
-        android:layout_marginLeft="16dp"
         android:text="TextView"
         app:layout_constraintLeft_toLeftOf="parent"
          />

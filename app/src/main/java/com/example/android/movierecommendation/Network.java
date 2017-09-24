@@ -18,11 +18,9 @@ public final class Network {
 
 
     private static final String MOVIE_URL =
-            "https://api.themoviedb.org/3/discover/movie?api_key=8ec38526869ee4cfd0daa37e1c9852e5";
+            "https://api.themoviedb.org/3/discover/movie?api_key=<<Insert your API Key Here>>";
 
-    /* The format we want our API to return */
-    private static final String format = "json";
-    /* The units we want our API to return */
+
 
     final static String SORT_PARAM = "sort_by";
 
