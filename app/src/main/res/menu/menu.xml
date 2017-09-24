@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Sort Popularity"
+        android:id="@+id/popularity"
+        android:orderInCategory="1"
+        app:showAsAction="always" />
+    <item android:title="Sort Ratings"
+        android:id="@+id/rating"
+        android:orderInCategory="2"
+        app:showAsAction="always" />
+
+
+</menu>

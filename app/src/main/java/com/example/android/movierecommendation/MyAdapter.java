@@ -22,7 +22,16 @@ import java.net.URL;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private String Jsondata;
     JSONObject jObject;
-    JSONArray results;
+    public static JSONArray results;
+    private Listener listener;
+
+    public void setListener (Listener listener) {
+        this.listener = listener;
+    }
+
+    public static interface Listener {
+        public void onClick(int position);
+    }
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -33,6 +42,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             super(v);
             mCardView = v;
             myImageView = (ImageView) mCardView.findViewById(R.id.image_view);
+
+
+
+
+
     }
     }
 
@@ -55,7 +69,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     return vh;}
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         //need to build the URI and then put it into the method
 
         JSONObject ObjectOfResults;
@@ -71,7 +85,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         CardView tempCardView = holder.mCardView;
         Picasso.with(holder.myImageView.getContext()).load("https://image.tmdb.org/t/p/w500" + imagePath).into(holder.myImageView);
-    }
+        tempCardView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                if (listener != null) {
+                    listener.onClick(position);}
+            }
+
+    });}
+
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
