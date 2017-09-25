@@ -11,9 +11,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Scanner;
 
-/**
- * These utilities will be used to communicate with the weather servers.
- */
 public final class Network {
 
 
