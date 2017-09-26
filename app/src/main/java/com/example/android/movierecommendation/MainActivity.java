@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         mLayoutManager = new GridLayoutManager(this, 3);
         mRecyclerView.setLayoutManager(mLayoutManager);
         if (isOnline()){
-            new FetchData().execute("popularity.desc");
+            new FetchData().execute("popular");
         } else {
             Toast.makeText(MainActivity.this, "There is no internet connection",Toast.LENGTH_LONG).show();
         }
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (id == R.id.popularity) {
             if (isOnline()){
-                new FetchData().execute("popularity.desc");
+                new FetchData().execute("popular");
             } else {
                 Toast.makeText(MainActivity.this, "There is no internet connection",Toast.LENGTH_LONG).show();
             }
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if (id == R.id.rating) {
             if (isOnline()){
-                new FetchData().execute("popularity.desc");
+                new FetchData().execute("top_rated");
             } else {
                 Toast.makeText(MainActivity.this, "There is no internet connection",Toast.LENGTH_LONG).show();
             }

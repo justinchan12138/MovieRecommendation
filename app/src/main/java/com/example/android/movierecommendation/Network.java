@@ -15,15 +15,15 @@ public final class Network {
 
 
     private static final String MOVIE_URL =
-            "https://api.themoviedb.org/3/discover/movie?api_key=<<Insert your API Key Here>>";
+            "https://api.themoviedb.org/3/movie";
 
-
-
-    final static String SORT_PARAM = "sort_by";
+    final static String API_KEY = "<<Insert API key here>>";
+    final static String API_KEY_QUERY = "api_key";
 
     public static URL buildUrl(String sort) {
         Uri builtUri = Uri.parse(MOVIE_URL).buildUpon()
-                .appendQueryParameter(SORT_PARAM, sort)
+                .appendPath(sort)
+                .appendQueryParameter(API_KEY_QUERY, API_KEY)
                 .build();
 
         URL url = null;
